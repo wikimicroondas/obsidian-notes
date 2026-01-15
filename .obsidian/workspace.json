@@ -6,7 +6,6 @@
       {
         "id": "80687d778b394a2f",
         "type": "tabs",
-        "dimension": 62.794918330308526,
         "children": [
           {
             "id": "4309c3a81694e870",
@@ -14,29 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tema 6 -  Gestión de la información.md",
+                "file": "IPO/T3. La relación laboral.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tema 6 -  Gestión de la información"
-            }
-          }
-        ]
-      },
-      {
-        "id": "809b7a6e236fbe2b",
-        "type": "tabs",
-        "dimension": 37.20508166969147,
-        "children": [
-          {
-            "id": "16014955fb77d5a9",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "T3. La relación laboral"
             }
           }
         ]
@@ -198,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,9 +195,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "16014955fb77d5a9",
+  "active": "4309c3a81694e870",
   "lastOpenFiles": [
-    "Tema 6 -  Gestión de la información.md",
+    "IPO/T4. El contrato.md",
+    "IPO/T3. La relación laboral.md",
+    "Structured Query Language.md",
+    "IT System/Tema 6 -  Gestión de la información.md",
+    "IPO",
+    "IT System",
+    "SQL",
     "U.md",
     "Untitled.canvas",
     "Excalidraw/Drawing 2026-01-08 17.46.16.excalidraw.md",

@@ -3,7 +3,6 @@
 # 1.  Ejercicios
 
 Exercise 1: 
-[[N]], [[S]], [[U]]
 $U = 8$ TB
 $S = 2$ TB
 / $N$ - Number of disks
@@ -17,4 +16,3 @@ $S = 2$ TB
 > RAID 01:   $NS / 2$     N(even)     N >= 4                                     Sol. $N = 8$
 
 > RAID 10:   $NS / 2$     N(even)     N >= 4                                     Sol. $N = 8$
-
