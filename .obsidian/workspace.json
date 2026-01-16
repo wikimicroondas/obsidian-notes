@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IPO/T3. La relación laboral.md",
+                "file": "IPO/T4. El contrato.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "T3. La relación laboral"
+              "title": "T4. El contrato"
             }
           }
         ]
@@ -197,8 +197,8 @@
   },
   "active": "4309c3a81694e870",
   "lastOpenFiles": [
-    "IPO/T4. El contrato.md",
     "IPO/T3. La relación laboral.md",
+    "IPO/T4. El contrato.md",
     "Structured Query Language.md",
     "IT System/Tema 6 -  Gestión de la información.md",
     "IPO",
