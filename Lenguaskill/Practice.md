@@ -80,4 +80,6 @@ Alejandro
 | ==But for== your help, I would have failed the exam          | But for = 'If it hadn't been for'       |
 | ==Despite== the heavy traffic, we arrived on time            | In spite needs 'of'                     |
 | ==Rarely== have I seen such a beautiful sunset               | Rarely + have                           |
+| Few \| Many \| A large number of                             | Is for countable nouns                  |
+| He ==can't have== stolen the money; he was with me           | Can't have = 'impossible'               |
 |                                                              |                                         |
