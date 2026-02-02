@@ -140,5 +140,5 @@ fi
 #!/usr/bin/env bash
 read -p "Day(Mon/Tue/.../Sun):" day
 # your if/then/else here
-if [ "$day"  ]
+if [ "$day" = "Sat" ] || [ "$day" = "Mon" ]
 ```
