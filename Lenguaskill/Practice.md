@@ -25,6 +25,7 @@
 | **In spite of**               | A pesar de                                          |
 | Succeed in [task] -ing        | Tener éxito con algo                                |
 | Take after                    | Parecerse a alguien                                 |
+| On behalf of                  | Representando a                                     |
 ## Writing
 This exercise gives 15 minutes to complete the first part and 40 minutes to resolve the general task
 
@@ -51,7 +52,7 @@ Alejandro
 ## Key word transformations
 | Failed                                                       | Additional information                  |
 | :----------------------------------------------------------- | --------------------------------------- |
-| He had ==difficulty== understanding the instructions         |                                         |
+| He had ==difficulty== understanding the instructions         | Finding something difficult             |
 | It is ==high time== you started studying for the final exam  | High time + past                        |
 | She ==succeeded== in finishing the project on time           | Succeed + past + -ing                   |
 | --                                                           |                                         |
@@ -82,4 +83,13 @@ Alejandro
 | ==Rarely== have I seen such a beautiful sunset               | Rarely + have                           |
 | Few \| Many \| A large number of                             | Is for countable nouns                  |
 | He ==can't have== stolen the money; he was with me           | Can't have = 'impossible'               |
-|                                                              |                                         |
+| I finally got my sister to drive me to the airport           | get + S. + to + infinitive              |
+| Much as I respect his work, I cannot agree with his methods  | Much as = 'fixed phrase'                |
+| At no time did I say she was responsible for the error       | Negative adverbial = reserse            |
+| I'll have the gardener cut the grass tomorrow                | Have someone DO something               |
+| He has recently taken to playing golf on weekends            | Take to + -ing (practice)               |
+| Had it not been for your help                                | == If it hadn't been for your help      |
+
+## Gapped Text
+En este ejercicio debes dar sentido a un texto con oraciones completas. Hay oraciones que sobran
+
