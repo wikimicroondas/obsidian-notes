@@ -6,9 +6,9 @@ En Java existen varios métodos que nos permiten comparar patrones de cadenas de
 ### A.matches(B)
 ```Java
 if (cadena.matches(".*1(?!2).*")) {
-	System.out.println("SÍ");
+	System.out.println("Sí");
 } else {
-	System.out.println("NO");
+	System.out.println("No");
 }
 ```
 
@@ -23,7 +23,7 @@ Este patrón corresponde a la hora en formato 12h
 -  -> `$` Indica que el String debe finalizar con una expresión
 -  `[abc]` String = a  | b | c
 -  `[abc][12]` a | b | c, 1 | 2
--  `[^abc]` Dentro de los 
+-  `[^abc]` Dentro de los corchetes significa negación
 -  `[a-z1-9]` Indica el rango
 -  `[0-9a]` Cualquier carácter entre el 0 y el 9a
 -  `A|B` A o B
@@ -50,9 +50,12 @@ Las anclas son límites de los elementos con los que trabajamos
 ## Casos especiales
 En estos casos hay que comentar que para poder utilizar las cadenas especiales (llamadas ==regex== ) hay que hacer escapar el primer "\ " con otro back slash
 
--  `\w` - carácter alfanumérico
--  `\W` – carácter no alfanumérico
--  `\s` – espacio en blanco
--  `\S` - no espacio en blanco
--  `\d` - dígito
--  `\D` - no dígito
+-  `\\w` - carácter alfanumérico
+-  `\\W` – carácter no alfanumérico
+-  `\\s` – espacio en blanco
+-  `\\S` - no espacio en blanco
+-  `\\d` - dígito
+-  `\\D` - no dígito
+
+### .replaceAll( regex, replacement)
+Método para Strings
