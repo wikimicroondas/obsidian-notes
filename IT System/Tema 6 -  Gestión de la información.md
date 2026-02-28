@@ -19,3 +19,7 @@ $S = 2$ TB
 > RAID 6:     $(N-1)S$                   N >= 3                                     Sol. $N = 5$
 > RAID 01:   $NS / 2$     N(even)     N >= 4                                     Sol. $N = 8$
 > RAID 10:   $NS / 2$     N(even)     N >= 4                                     Sol. $N = 8$
+
+
+### Siguiente tema
+[[Tema 7 - Bash scripts]]
