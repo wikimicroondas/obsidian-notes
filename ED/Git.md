@@ -15,10 +15,10 @@
 `git remote add origin [url]`
 
 ### Cambiar el repositorio remoto
-`git remote set-url origin [URL]`
+`git remote set-url origin [url]`
 
 ### Revertir un commit con otro
-`git revert [hash_del_commit]`
+`git revert HEAD`
 
 ### Borrar el último commit (problematico)
-`git reset --hard [hash_del_commit]`
+`git reset --hard HEAD~1`
