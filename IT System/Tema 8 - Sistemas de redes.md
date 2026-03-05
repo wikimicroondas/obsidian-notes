@@ -1,6 +1,14 @@
 ## Cisco Packet Tracer
 
+### CLI
+`Example 1: Enable dhcp`
+`router-config:` 192.168.0.254
+-- enable dhcp --
+dhcp pull
+config-network 192.168.0.254 255.255.255.0
 
+`Example 2: How to make internet`
+~ ~ 4
 
 ## Octetos
 0.0.0.0 - 255.255.255.255
