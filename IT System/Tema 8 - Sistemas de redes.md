@@ -4,7 +4,7 @@
 `Example 1: Enable dhcp`
 `router-config:` 192.168.0.254
 -- enable dhcp --
-dhcp pull
+ip dhcp pool
 config-network 192.168.0.254 255.255.255.0
 
 `Example 2: How to make internet`
@@ -40,3 +40,31 @@ El rango de IPs útiles se calcula dentro del primer octeto, delimitado excluyen
 - `IPs:` 192.0.0.1 - 192.255.255.254
 
 Con cualquier máscara podemos controlar cualquier red.
+
+### Anotaciones
+Mono-mode. Long distance
+Multi-mode. Short distance
+
+00 - Network
+01 - 
+10 - 
+11 - Broadcast
+
+### Práctica 1
+---
+1. Se establece una red, compuesta por dos ordenadores y un portátil. Los ordenadores están conectados a un Switch PT-Empty, mientras que el portátil está conectado a un AccessPoint P-T (a su vez conectado a al mismo Switch).
+2. Este Switch está conectado a un Router PT-Empty.
+3. El Router está configurado mediante CLI para habilitar DHCP con la IP `192.168.0.254`.
+4. El comando destacado para este proceso es "dhcp pull".
+
+### Práctica 2
+---
+1. Con la red anterior se plantea hacer "internet".
+2. Se clona el router, quitando las IPs.
+3. Se desconoce el procedimiento, en palabras del profesor "Quiero adaptar la máscara para no perder IPs".
+4. En la imagen se aprecia una conexión Serial DTE con una anotación `100.0.0.0/30`.
+
+### Práctica 3
+---
+1. Se quiere crear otra red o internet clonando el Router PT-Empty.
+2. Teniendo la network `200.0.0.0/30`.
