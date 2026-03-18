@@ -29,22 +29,18 @@ Los portátiles de Packet Tracer no tienen placas de Wi-Fi por defecto, hay que 
 Al encender el dispositivo, automáticamente se conectará a la red.
 
 ### 4. Configurar el Router y el DHCP por CLI
-1. `Router2 > CLI`
+1. `Router0 > CLI`
 2. Pulsa `Enter`
 3. Comandos:
 
 ```Cisco CLI
-// Se asume que está conectado por gigabitEthernet 0/0
-enable
 configure terminal
 
-// La puerta de enlace será 192.168.0.254
-interface gigabitEthernet 0/0
+interface gigabitEthernet 9/0
 ip address 192.168.0.254 255.255.255.0
 no shutdown
 exit
 
-// Crear el servidor DHCP para que asigne dinámicamente IPs a los ordenadores
 ip dhcp pool RED_LOCAL
 network 192.168.0.0 255.255.255.0
 default-router 192.168.0.254
@@ -84,22 +80,22 @@ Los equipos PT-Empty no tienen soporte para uniones Serial DTE (cable rojo). Par
 Los puertos serial comparten el mismo nombre
 
 ### 3. Asignar IPs mediante CLI
-// El comando `interface` depende directamente del serial e.g `serial 0/1/0`
--  Router 2
+// El comando `interface` depende directamente del serial e.g `serial 4/0`
+-  Router 1
 ```Cisco CLI
 enable
 configure terminal
-interface serial 0/0/0
+interface serial 4/0
 ip address 100.0.0.1 255.255.255.252
 no shutdown
 exit
 ```
 
--  Router 1
+-  Router 0
 ```Cisco CLI
 enable
 configure terminal
-interface serial 0/0/0
+interface serial 4/0
 ip address 100.0.0.2 255.255.255.252
 no shutdown
 exit
