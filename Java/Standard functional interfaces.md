@@ -74,3 +74,21 @@ Consumer<String> printer = System.out::println;
 printer.accept("!!!"); // "!!!"
 ```
 Accepts a value and returns no value
+
+## Composing functions
+The functional interface `Function<T, R>` has two default methods `compose` and `andThen` for composing new functions. The main difference between these methods lies in the execution order.
+
+- `f.compose(g).apply(x)`  -->   `f(g(x))`
+- `f.andThen(g).apply(x)`  -->   `g(f(x))`
+
+e.g
+```java
+Function<Integer, Integer> adder = x -> x + 10;
+Function<Integer, Integer> multiplier = x -> x * 5;
+
+// compose: adder(multiplier(5))
+System.out.println("result: " + adder.compose(multiplier).apply(5)); // 35
+
+// andThen: multiplier(adder(5))
+System.out.println("result: " + adder.andThen(multiplier).apply(5)); // 75
+```
