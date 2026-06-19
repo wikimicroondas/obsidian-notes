@@ -87,8 +87,8 @@ Creating a new function using another one as a base. This solution returns a `ne
 ## Composing functions
 The functional interface `Function<T, R>` has two default methods `compose` and `andThen` for composing new functions. The main difference between these methods lies in the execution order.
 
-- `f.compose(g).apply(x)`  -->   `f(g(x))`
-- `f.andThen(g).apply(x)`  -->   `g(f(x))`
+- `f.compose(g)`  -->   `f(g(x))`
+- `f.andThen(g)`  -->   `g(f(x))`
 
 e.g
 ```java
@@ -150,3 +150,8 @@ This exercise is read from left to right, the point is that there is an internal
 ```
 
 When we use `.andThen()`, the compiler understands `A.andThen(B)` as a block, so we are forced to solve `A` and then `B`. When we reach the same level it is read from left to right.
+
+If we are at the same surface level `compose` replaces `x` value for `compose(h)`.
+```java
+f.andThen(g).compose(h); // g(f(h(x)))
+```
