@@ -52,3 +52,5 @@ coins.add(small);
 Collections.sort(coins);
 coins.forEach(System.out::println);
 ```
+
+Some clases already have implemented the `Comparable` interfaces, such as `Integer` and `String` with their respective natural order.
