@@ -1,7 +1,18 @@
 # Comparable interface
 > java.lang.Comparable
 
+> [!info] Comparator vs Comparable
+> - The object has **only one obvious, inherent way** to be sorted
+> - You own the source code and can modify the class directly
+
 `Comparable` provides the `compareTo()` method which allows comparing an object with other objects of the same type. It's also important to comply with the conditions: all objects can be compared to other objects of the same type in the most widely used way, which means `compareTo()` should be consistent with the `equals` method. A sequence of data has the natural ordering, if for each 2 elements `a` and `b`, where `a` is located to the left of `b`, the condition is true: `a.compareTo(b) <= 0`.
+
+Meaning of its returns:
+- `1` - Greater than
+- `0` - Equal
+- `-1` - Less than
+
+It is important to override `equals` to match `compareTo` implementation.
 
 e.g
 
