@@ -38,3 +38,19 @@ JVM will not terminate a program if it still has any `non-daemon` thread running
 This declaration makes the operations of a certain variable atomic. This state allows multiple threads to work with the same reference without overlapping or losing data. `volatile` is used for visibility between threads.
 
 This keyword is commonly used in `long` and `double` references. (As a rule, data types of more than 64 bits).
+
+### synchronized keyword
+Limits the access of a block, statement or variable to a single thread, if any other thread tries to access this data they will freeze.
+
+```java
+class SomeClass {
+    public static synchronized void doSomething() {
+        String threadName = Thread.currentThread().getName();
+        System.out.println(String.format("%s entered the method", threadName));
+        System.out.println(String.format("%s leaves the method", threadName));
+    }
+}
+```
+
+# ThreadLocal class
+It's a class that does not share date with other threads.
