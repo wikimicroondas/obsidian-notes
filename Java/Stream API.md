@@ -34,3 +34,29 @@ Once a terminal operation has been evaluated, it is impossible to reuse the stre
 
 Some terminal operations return an `Optional` because the stream can be empty and you need to specify a default value or an action if it is empty.
 
+## Collectors class
+> java.util.stream.Collectors
+
+### Usage
+```java
+`import static java.util.stream.Collectors.[method];
+```
+We copy the method that we want to use, for example:
+- `summingInt`, `summingLong`, `summingDouble`
+- `averagingInt`, `averagingLong`, `averagingDouble`
+- `maxBy`, `minBy`
+- `counting`
+
+### Example
+```java
+double average = accounts.stream()
+        .collect(averagingLong(Account::getBalance));
+```
+
+### Complex example
+```java
+String megaNumber = accountStream.collect(Collectors.reducing("",
+        account -> account.getNumber(),
+        (numbers, number) -> numbers.concat(number)
+));
+```
