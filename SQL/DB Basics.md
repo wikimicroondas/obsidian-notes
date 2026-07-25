@@ -51,3 +51,25 @@ During its life cycle, any transaction passes through several different states.
 
 These transactions follow a `concurrent` design, this means that all of the information that is being processed is locked from executing other operations until it ends.
 
+## Relational data model (RDM)
+The RDM is based in the concept of relations between `entities` (abstractions of real world objects). They are represented in a two-dimensional table.
+
+### e.g
+```bash
+| student_number | last_name | first_name | date_of_birth |
+| -------------- | --------- | ---------- | ------------- |
+|    88881111    |  Jackson  |    John    |   01.01.2000  |
+```
+* `atribute` - A column of the table, some property of which has a relation.
+* `tuple`      - A row in a table, a collection of specific attribute values.
+
+### Entity integrity
+* Entity integrity
+	The cannot be two identical tuples. We cannot have two absolutely identical objects. To maintain the integrity of an entity the concept of `primary key` is introduced.
+
+> 	A primary key (PK) is a field or a set of fields that uniquely identifies each record in a table.
+* Referential integrity
+	A secondary relation that is being refereed in an entity between them. The secondary relation is represented by a `foreign key`.
+
+> 	A foreign key (FK) is a field used to create a many-to-one relationship or viceversa.
+
