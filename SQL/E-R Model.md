@@ -1,4 +1,4 @@
-# ERDs
+# E-R Diagram
 Modifying databases after the implementation phase result in large costs. E-R Diagrams is the fastest way to spot design flaws.
 
 ## Crow's foot notation
@@ -24,6 +24,10 @@ The `FK` is used as a part of the `PK` because it cannot exist by itself.
 * `Dashed line`
 The `FK` is used to inform that an entity is part of a collection but can exist by itself.
 
+# E-R Model
 ## N-M Problem
 It is not possible to create a table with multiple values. Since we need a list we use intermediate objects as a value-storage system for instance data.
 ![[many-to-many-problem-and-solution.svg]]
+### Compound PK problem
+Using compound primary keys will lead into framework boiler plate code, over complication of child entities from the instance object and slow SQL queries. Use auto incremental  `serial subrogate keys` for this purpose.
+
