@@ -39,7 +39,7 @@ Some terminal operations return an `Optional` because the stream can be empty an
 
 ### Usage
 ```java
-`import static java.util.stream.Collectors.[method];
+import static java.util.stream.Collectors.[method];
 ```
 We copy the method that we want to use, for example:
 - `summingInt`, `summingLong`, `summingDouble`
@@ -60,3 +60,57 @@ String megaNumber = accountStream.collect(Collectors.reducing("",
         (numbers, number) -> numbers.concat(number)
 ));
 ```
+
+## Partitioning
+```java
+Map<Boolean, List<Account>> accountsByBalance = accounts.stream()
+        .collect(Collectors.partitioningBy(account -> account.getBalance() >= 10000));
+```
+For a balance above or equal to `10_000`. It always return a `Map`.
+
+## Grouping
+```java
+enum Status {
+    ACTIVE,
+    BLOCKED,
+    REMOVED
+}
+
+public class Account {
+    private long balance;
+    private String number;
+    private Status status;
+    
+    // constructors
+    // getters and setters
+}
+```
+We can group the accounts into a map based on a condition. It returns a `Map`.
+```java
+Map<Status, List<Account>> accountsByStatus = accounts.stream()
+        .collect(Collectors.groupingBy(Account::getStatus));
+```
+
+## Downstream collectors
+```java
+Map<Status, Long> sumByStatuses = accounts.stream()
+        .collect(Collectors.groupingBy(
+                Account::getStatus,
+                LinkedHashMap::new,    // <---
+                Collectors.summingLong(Account::getBalance))   // <---
+         );
+```
+We can apply a specific implementation of `Map` and concatenate another operation, such as a sum. A `downstream` is a role applied to any method in the collectors class, the only condition given is that it has to be inside of another collectors stream.
+
+## Teeing collector
+```java
+long[] countAndSum = accounts
+        .stream()
+        .filter(account -> account.getStatus() == Status.BLOCKED)
+        .collect(Collectors.teeing(
+                Collectors.counting(),
+                Collectors.summingLong(Account::getBalance),
+                (count, sum) -> new long[]{count, sum})
+        );
+```
+An optimized option to iterate a list once and apply multiple operations. It takes two downstream collectors.
