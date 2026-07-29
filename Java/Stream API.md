@@ -122,9 +122,9 @@ To represent each primitive type we have three primitive streams. `IntStream`, `
 // imports
 public List<String> getHexSegment(List<String> hex) {
 	return hex.stream()
-			  .dropWhile(h -> !h.equals("#0000"))
+			  .dropWhile(h -> !h.equals("#000000"))
 			  .skip(1)
-			  .takeWhile(h -> !h.equals("#FFFF"))
+			  .takeWhile(h -> !h.equals("#FFFFFF"))
 			  .collect(Collectors.toList());
 }
 ```
