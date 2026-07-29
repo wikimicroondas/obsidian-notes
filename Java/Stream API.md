@@ -129,3 +129,29 @@ public List<String> getHexSegment(List<String> hex) {
 }
 ```
 This method takes a segment of a specified range of hex codes using functions in each mentioned method.
+
+## Infinite streams
+Stream API provides supplier affected streams that generate objects.
+
+### generate
+A constructor is a supplier in this case
+```java
+Stream<Double> randomNumbers = Stream.generate(Math::random);
+Stream<User> userStream = Stream.generate(User::new);
+```
+
+### iterate
+Substitutes a `for` loop. `(seed, function)`.
+```java
+Stream<Integer> oddNumbersStream = Stream.iterate(1, x -> x + 2); // 1, 3, ...
+```
+Overloaded version:
+```java
+Stream.iterate(1, x -> x < 10, x -> x + 2)
+        .forEach(System.out::println); // 1 3 5 7 9
+```
+In between it takes a predicate that determines whether the loop must continue.
+`(seed, condition, function)`.
+
+> In most cases it is preferred to use `limit`, as it improves readability
+
