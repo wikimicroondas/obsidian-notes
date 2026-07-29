@@ -114,3 +114,18 @@ long[] countAndSum = accounts
         );
 ```
 An optimized option to iterate a list once and apply multiple operations. It takes two downstream collectors.
+
+## Primitive streams
+To represent each primitive type we have three primitive streams. `IntStream`, `LongStream` and `DoubleStream`.
+### takeWhile and dropWhile
+```java
+// imports
+public List<String> getHexSegment(List<String> hex) {
+	return hex.stream()
+			  .dropWhile(h -> !h.equals("#0000"))
+			  .skip(1)
+			  .takeWhile(h -> !h.equals("#FFFF"))
+			  .collect(Collectors.toList());
+}
+```
+This method takes a segment of a specified range of hex codes using functions in each mentioned method.
