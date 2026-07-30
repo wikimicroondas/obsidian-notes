@@ -20,6 +20,7 @@ Once a terminal operation has been evaluated, it is impossible to reuse the stre
 - `sorted` returns a new stream that includes elements sorted according to the natural order or a given **comparator**;
 - `peek` returns the same stream of elements but allows observing the current elements of the stream for debugging;
 - `map` returns a new stream that consists of the elements that were obtained by applying a function (i.e. transforming each element).
+- `flatMap` given an nested array of lists, this method returns a plain stream with a single list containing all the elements 
 
 ## Terminal operations
 
