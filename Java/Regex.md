@@ -1,6 +1,6 @@
 > Las expresiones regulares limitan los inputs del usuario
 
-#### Regex = Regular expresions
+#### Regex = Regular expressions
 ### Aplicación en Java
 En Java existen varios métodos que nos permiten comparar patrones de cadenas de texto
 ### A.matches(B)
