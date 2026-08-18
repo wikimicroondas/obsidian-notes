@@ -33,3 +33,26 @@ for (Constructor dc : declaredConstructors) {
 }
 // ...
 ```
+
+## Real example
+Increasing an account balance value at runtime
+```java
+import java.lang.reflect.Field;
+
+final class AccountUtils {
+
+    private AccountUtils() { }
+    
+    public static void increaseBalance(Account account, long amount) {
+        try {
+            Field accountBalance = account.getClass().getDeclaredFields()[0];
+            accountBalance.setAccessible(true);
+            long currentBalance = accountBalance.getLong(account);
+            accountBalance.setLong(account, currentBalance + amount);
+        }
+        catch (Exception e) { // *logging must be fixed in this case
+            e.printStackTrace();
+        }
+    }
+}
+```
