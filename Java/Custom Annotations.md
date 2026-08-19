@@ -1,3 +1,6 @@
+# Custom Annotations
+> java.lang.annotation.*
+
 Custom annotations have to be defined in `@interface` files
 ```java
 public @interface Description {}
@@ -42,7 +45,7 @@ public @interface Descriptions {
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-@Repeatable(Descriptions.class)
+@Repeatable(Descriptions.class) 
 public @interface Description {...}
 ```
 Now it accepts collaborations
