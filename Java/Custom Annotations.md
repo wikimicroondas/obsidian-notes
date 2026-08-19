@@ -20,6 +20,7 @@ public @interface Description {}
 
 ## Parameters
 The default value can't be null.
+The parameters can be primitives, String, Class, Enum, annotation and arrays of these types.
 ```java
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
