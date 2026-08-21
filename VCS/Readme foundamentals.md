@@ -1,4 +1,4 @@
-# Index
+# How to write one
 ## Readme Driven Development
 First step for every project should be to write down the ideas into a document that every member of a team should have access to, that's the `README`. We have to be aware of to whom is meant to be written for, either for final users or contributors.
 
