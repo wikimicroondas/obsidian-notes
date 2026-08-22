@@ -45,7 +45,7 @@ public class UserService {
 ```
 
 ### extended usage
-`CommandLineRunner` is a component which `run` method is equivalent to the `main` method of console applications.
+`CommandLineRunner` is an interface component whose `run` method is equivalent to the `main` method of console applications.
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
